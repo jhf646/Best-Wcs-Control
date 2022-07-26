@@ -67,30 +67,36 @@ export default defineConfig({
     },
     {
       path: '/dashboard',
-      name: 'dashboard',
+      name: '库位管理',
       icon: 'dashboard',
       routes: [
+        // {
+        //   path: '/dashboard',
+        //   redirect: '/dashboard/analysis',
+        // },
+        // {
+        //   name: 'analysis',
+        //   icon: 'smile',
+        //   path: '/dashboard/analysis',
+        //   component: './dashboard/analysis',
+        // },
+        // {
+        //   name: 'monitor',
+        //   icon: 'smile',
+        //   path: '/dashboard/monitor',
+        //   component: './dashboard/monitor',
+        // },
+        // {
+        //   name: 'workplace',
+        //   icon: 'smile',
+        //   path: '/dashboard/workplace',
+        //   component: './dashboard/workplace',
+        // },
         {
-          path: '/dashboard',
-          redirect: '/dashboard/analysis',
-        },
-        {
-          name: 'analysis',
+          name: '库位可视化',
           icon: 'smile',
-          path: '/dashboard/analysis',
-          component: './dashboard/analysis',
-        },
-        {
-          name: 'monitor',
-          icon: 'smile',
-          path: '/dashboard/monitor',
-          component: './dashboard/monitor',
-        },
-        {
-          name: 'workplace',
-          icon: 'smile',
-          path: '/dashboard/workplace',
-          component: './dashboard/workplace',
+          path: '/dashboard/bestksh',
+          component: './dashboard/bestksh',
         },
       ],
     },
@@ -335,20 +341,20 @@ export default defineConfig({
   },
   // Fast Refresh 热更新
   fastRefresh: {},
-  openAPI: [
-    {
-      requestLibPath: "import { request } from 'umi'",
-      // 或者使用在线的版本
-      // schemaPath: "https://gw.alipayobjects.com/os/antfincdn/M%24jrzTTYJN/oneapi.json"
-      schemaPath: join(__dirname, 'oneapi.json'),
-      mock: false,
-    },
-    {
-      requestLibPath: "import { request } from 'umi'",
-      schemaPath: 'https://gw.alipayobjects.com/os/antfincdn/CA1dOm%2631B/openapi.json',
-      projectName: 'swagger',
-    },
-  ],
+  // openAPI: [
+  //   {
+  //     requestLibPath: "import { request } from 'umi'",
+  //     // 或者使用在线的版本
+  //     // schemaPath: "https://gw.alipayobjects.com/os/antfincdn/M%24jrzTTYJN/oneapi.json"
+  //     schemaPath: join(__dirname, 'oneapi.json'),
+  //     mock: false,
+  //   },
+  //   {
+  //     requestLibPath: "import { request } from 'umi'",
+  //     schemaPath: 'https://gw.alipayobjects.com/os/antfincdn/CA1dOm%2631B/openapi.json',
+  //     projectName: 'swagger',
+  //   },
+  // ],
   nodeModulesTransform: {
     type: 'none',
   },
